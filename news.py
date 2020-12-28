@@ -26,7 +26,7 @@ td = datetime.date.today()
 
 
 
-driver= webdriver.Chrome('/Users/abraraltaflone/code/python/web_scrap/chromedriver')#,options=CO)
+driver= webdriver.Chrome('/Users/abraraltaflone/code/python/web_scrap/chromedriver') #download driver from : https://chromedriver.chromium.org/downloads
 
 print ("Connecting to Legit News source, Please have some patience .....\n")
 time.sleep(2)
@@ -43,7 +43,8 @@ driver.get(news_site)
 driver.implicitly_wait(10) # 10 secs implicit wait
 elems = driver.find_elements_by_tag_name('h3')
 
-file_loc = '/Users/abraraltaflone/code/python/web_scrap/headlines/newsfile.txt'
+# 
+file_loc = '/Users/abraraltaflone/code/python/web_scrap/headlines/newsfile.txt' #creating anew file where data will be stored
 file_to_write = open(file_loc, 'w+')
 ind = 1
 for elem in elems:
